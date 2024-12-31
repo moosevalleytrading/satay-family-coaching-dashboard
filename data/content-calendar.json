@@ -1,0 +1,96 @@
+{
+  "monthly_calendar": {
+    "week_1": {
+      "focus": "Condition-focused content",
+      "topic": "Understanding Sciatica: A Chiropractor's Guide",
+      "target_keyword": "chiropractor sciatica near me",
+      "search_volume": 150,
+      "word_count": 1500,
+      "outline": [
+        "Defining Sciatica",
+        "Causes & Risk Factors",
+        "Chiropractic Treatment Techniques",
+        "Exercises & Prevention Tips",
+        "FAQs from Patients"
+      ],
+      "due_date": "2025-01-07",
+      "status": "in_progress"
+    },
+    "week_2": {
+      "focus": "Treatment-specific content",
+      "topic": "The Complete Guide to Sports Injury Treatment",
+      "target_keyword": "sports chiropractic",
+      "search_volume": 120,
+      "word_count": 1800,
+      "outline": [
+        "Common Sports Injuries",
+        "Chiropractic Techniques for Athletes",
+        "Recovery & Prevention Strategies",
+        "When to Consult a Sports Chiropractor",
+        "Local Resources in Phoenix"
+      ],
+      "due_date": "2025-01-14",
+      "status": "planned"
+    },
+    "week_3": {
+      "focus": "Wellness & prevention content",
+      "topic": "Natural Pain Management Through Chiropractic Care",
+      "target_keyword": "chiropractor phoenix",
+      "search_volume": 1100,
+      "word_count": 1500,
+      "outline": [
+        "Defining Natural Pain Management",
+        "Holistic Treatment Approaches",
+        "Lifestyle Adjustments for Pain Prevention",
+        "Patient Success Stories",
+        "Local Phoenix Resources"
+      ],
+      "due_date": "2025-01-21",
+      "status": "planned"
+    },
+    "week_4": {
+      "focus": "Local community content",
+      "topic": "Chiropractic Care for Active Lifestyles in Phoenix",
+      "target_keyword": "active health",
+      "search_volume": 1200,
+      "word_count": 1500,
+      "outline": [
+        "Phoenix as an Active Community",
+        "Common Activities & Injuries",
+        "Chiropractic Support for Active Adults",
+        "Local Event & Activity Guides",
+        "Preventive Tips & Nutrition"
+      ],
+      "due_date": "2025-01-28",
+      "status": "planned"
+    }
+  },
+  "ongoing_series": [
+    {
+      "topic": "Chiropractic Insurance Explained",
+      "target_keyword": "chiropractic insurance",
+      "search_volume": 600,
+      "word_count": 1200,
+      "outline": [
+        "Types of Insurance Plans",
+        "Coverage Options for Chiropractic Care",
+        "How to Verify Your Benefits",
+        "Maximizing Your Coverage",
+        "Phoenix Insurance Providers"
+      ],
+      "status": "planned"
+    }
+  ],
+  "published_content": [
+    {
+      "title": "How Chiropractic Care Helps with Back Pain",
+      "url": "/blog/chiropractic-care-back-pain",
+      "publish_date": "2024-12-01",
+      "performance": {
+        "pageviews": 1200,
+        "average_time": "4:30",
+        "bounce_rate": "65%"
+      }
+    }
+  ]
+}
