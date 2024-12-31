@@ -2,133 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Keyword Research | Hansen Chiropractic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyword Research | Satay Family Coaching</title>
   <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     rel="stylesheet"
+    href="/satay-family-coaching-dashboard/assets/css/styles.css"
   />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="../assets/css/components/tables.css" />
+  <link
+    rel="stylesheet"
+    href="/satay-family-coaching-dashboard/assets/css/components/tables.css"
+  />
 </head>
-<body class="bg-gray-50">
-  <!-- Navigation -->
-  <nav class="bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <a href="../index.html" class="flex items-center py-4">
-        <span class="font-semibold text-gray-700 text-lg">Hansen Chiropractic SEO</span>
-      </a>
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="../index.html" class="text-gray-500 hover:text-blue-500">Dashboard</a>
-        <a href="content-calendar.html" class="text-gray-500 hover:text-blue-500">Content Calendar</a>
-        <a href="site-copy.html" class="text-gray-500 hover:text-blue-500">Site Copy</a>
-        <a href="keyword-research.html" class="text-blue-500 font-semibold border-b-2 border-blue-500"
-          >Keyword Research</a
-        >
-      </div>
-    </div>
+<body>
+  <nav>
+    <a href="/satay-family-coaching-dashboard/index.html">Dashboard</a>
+    <a href="/satay-family-coaching-dashboard/pages/content-calendar.html">Content Calendar</a>
+    <a href="/satay-family-coaching-dashboard/pages/keyword-research.html">Keyword Research</a>
+    <a href="/satay-family-coaching-dashboard/pages/site-copy.html">Site Copy</a>
   </nav>
-
-  <!-- Main Content -->
-  <div class="max-w-7xl mx-auto px-4 py-8">
-    <h1 class="text-2xl font-bold text-gray-800 mb-4">Keyword Research</h1>
-    <p class="text-gray-600 mb-8">
-      Explore keyword data, search volumes, difficulty scores, and SERP features.
-    </p>
-
-    <div class="bg-white rounded-lg shadow mb-8">
-      <div class="px-6 py-4 border-b flex justify-between items-center">
-        <h2 class="text-lg font-semibold">Keywords Overview</h2>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-gray-200 keyword-table">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Keyword</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Search Volume</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Difficulty</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Intent</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">SERP Features</th>
-            </tr>
-          </thead>
-          <tbody id="keywordTableBody" class="bg-white divide-y divide-gray-200">
-            <!-- Content populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/components/tables.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      loadKeywordData();
-    });
-
-    /**
-     * Fetch the entire keywords.json and render each category
-     * in one consolidated table.
-     */
-    async function loadKeywordData() {
-      try {
-        const response = await fetch('../assets/data/keywords.json');
-        const data = await response.json();
-
-        const tableBody = document.getElementById('keywordTableBody');
-        tableBody.innerHTML = '';
-
-        /**
-         * We'll gather all arrays inside keywords.json:
-         * "high_priority", "medium_priority", "local_intent", "treatment_specific",
-         * "long_tail", "location_based", "specialty_service", "competitor_keywords",
-         * "content_strategy"
-         */
-        let allKeywords = [];
-
-        // Helper function to map an array of keyword objects
-        // to a standard shape for easy table rendering.
-        function mapKeywordData(keywordArray) {
-          return (keywordArray || []).map(k => ({
-            keyword: k.keyword,
-            search_volume: k.search_volume,
-            difficulty: k.difficulty,
-            intent: k.intent || '—',
-            serp_features: (k.serp_features || []).join(', ')
-          }));
-        }
-
-        // Process each property
-        allKeywords = [
-          ...allKeywords,
-          ...mapKeywordData(data.high_priority),
-          ...mapKeywordData(data.medium_priority),
-          ...mapKeywordData(data.local_intent),
-          ...mapKeywordData(data.treatment_specific),
-          ...mapKeywordData(data.long_tail),
-          ...mapKeywordData(data.location_based),
-          ...mapKeywordData(data.specialty_service),
-          ...mapKeywordData(data.competitor_keywords),
-          ...mapKeywordData(data.content_strategy)
-        ];
-
-        // Render each item
-        allKeywords.forEach(item => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td class="px-6 py-4 text-sm text-gray-900">${item.keyword || '—'}</td>
-            <td class="px-6 py-4 text-sm text-gray-500">${item.search_volume || '—'}</td>
-            <td class="px-6 py-4 text-sm text-gray-500">${item.difficulty || '—'}</td>
-            <td class="px-6 py-4 text-sm text-gray-500">${item.intent}</td>
-            <td class="px-6 py-4 text-sm text-gray-500">${item.serp_features || '—'}</td>
-          `;
-          tableBody.appendChild(tr);
-        });
-      } catch (error) {
-        console.error('Error loading keyword data:', error);
-      }
-    }
-  </script>
+  <main>
+    <h1>Keyword Research</h1>
+    <table id="keywordTableBody"></table>
+  </main>
+  <script
+    src="/satay-family-coaching-dashboard/assets/js/components/tables.js"
+  ></script>
 </body>
 </html>
