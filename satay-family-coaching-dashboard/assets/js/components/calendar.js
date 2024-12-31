@@ -1,10 +1,9 @@
 // calendar.js
-// Additional functionality for the Content Calendar page can go here.
-
-function filterContentByStatus(status) {
-    // Example: filter rows by status
+async function loadContentCalendarData() {
+  const response = await fetch(
+    "/satay-family-coaching-dashboard/data/content-calendar.json"
+  );
+  const data = await response.json();
+  console.log("Content Calendar Data:", data);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Event listeners, filters, etc.
-});
+document.addEventListener("DOMContentLoaded", loadContentCalendarData);
