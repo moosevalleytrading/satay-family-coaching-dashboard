@@ -1,6 +1,0 @@
-/* Dashboard-specific styles */
-.stats-grid .stat-card {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
