@@ -1,0 +1,110 @@
+{
+  "site_structure": {
+    "main_pages": [
+      {
+        "url": "/",
+        "title_key": "homepage",
+        "type": "core",
+        "children": [
+          {
+            "url": "/services",
+            "title_key": "services_page",
+            "type": "core",
+            "children": [
+              {
+                "url": "/services/sports-medicine",
+                "title_key": "sports_medicine_page",
+                "type": "service-specific"
+              },
+              {
+                "url": "/services/spinal-decompression",
+                "title_key": "spinal_decompression_page",
+                "type": "service-specific"
+              },
+              {
+                "url": "/services/soft-tissue-therapy",
+                "title_key": "soft_tissue_page",
+                "type": "service-specific"
+              },
+              {
+                "url": "/services/pain-management",
+                "title_key": "pain_management_page",
+                "type": "service-specific"
+              }
+            ]
+          },
+          {
+            "url": "/conditions/low-back-pain",
+            "title_key": "low_back_pain_page",
+            "type": "condition-specific"
+          },
+          {
+            "url": "/conditions/sciatica",
+            "title_key": "sciatica_page",
+            "type": "condition-specific"
+          },
+          {
+            "url": "/about",
+            "title_key": "about_us_page",
+            "type": "core"
+          },
+          {
+            "url": "/new-patients",
+            "title_key": "new_patient_page",
+            "type": "core"
+          },
+          {
+            "url": "/contact",
+            "title_key": "contact_page",
+            "type": "core"
+          },
+          {
+            "url": "/wellness-resources",
+            "title_key": "wellness_resources_page",
+            "type": "content-hub"
+          },
+          {
+            "url": "/patient-success-stories",
+            "title_key": "patient_success_stories_page",
+            "type": "content-hub"
+          }
+        ]
+      }
+    ],
+    "localization": {
+      "location_pages": [
+        {
+          "url": "/locations/phoenix",
+          "title": "Chiropractor Phoenix | Pain Relief & Wellness",
+          "intent": "local"
+        }
+      ]
+    },
+    "technical_seo": [
+      "Implement schema markup: LocalBusiness, MedicalOrganization, FAQ, Review",
+      "Optimize Core Web Vitals",
+      "Compress images & enable caching",
+      "Ensure SSL is active",
+      "Create & submit XML sitemap",
+      "Proper robots.txt configuration"
+    ],
+    "local_seo": [
+      "Optimize Google Business Profile",
+      "Maintain NAP consistency",
+      "Build local citations",
+      "Encourage reviews"
+    ],
+    "content_distribution": [
+      "Email newsletters",
+      "Social media shares",
+      "Local business directories",
+      "Community partnerships"
+    ],
+    "primary_ctas": [
+      "Schedule Appointment",
+      "Same-Day Appointments Available",
+      "Call (602) 437-2225",
+      "Free Consultation"
+    ]
+  }
+}

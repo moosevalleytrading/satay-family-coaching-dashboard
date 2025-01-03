@@ -1,0 +1,58 @@
+{
+  "seo_metrics": {
+    "organic_traffic": {
+      "current_month": 12450,
+      "previous_month": 10123,
+      "growth_percentage": 23
+    },
+    "keyword_rankings": {
+      "total_keywords": 48,
+      "top_3_positions": 4,
+      "top_10_positions": 16,
+      "positions_11_100": 28
+    },
+    "conversion_metrics": {
+      "form_submissions": 25,
+      "phone_calls": 40,
+      "appointment_requests": 18
+    }
+  },
+  "content_performance": {
+    "total_content_pieces": 12,
+    "content_pipeline": {
+      "published": 8,
+      "in_progress": 3,
+      "planned": 4
+    },
+    "average_word_count": 1500,
+    "engagement": {
+      "average_time_on_page": "3:45",
+      "average_bounce_rate": "68%",
+      "social_shares": 45
+    }
+  },
+  "local_ranking": {
+    "gmb_insights": {
+      "map_views": 320,
+      "search_views": 1100,
+      "calls_from_gmb": 15
+    },
+    "local_pack_ranks": [
+      {
+        "keyword": "chiropractor phoenix",
+        "position": 2
+      },
+      {
+        "keyword": "chiropractor sciatica near me",
+        "position": 1
+      }
+    ]
+  },
+  "tracking_setup": {
+    "analytics": "Google Analytics 4",
+    "search_console": "Connected",
+    "call_tracking": "Enabled",
+    "goal_completions": "Form & Phone",
+    "rank_tracking_tool": "SEMrush"
+  }
+}
